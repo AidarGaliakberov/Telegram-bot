@@ -6,6 +6,7 @@ TOKEN = "5769775888:AAFYGuAL9OsLLu4imbl85lhlRkUMnUdw0g4"
 # Ссылки и ID нашего канала и чата:
 CHANNEL_URL = "https://t.me/testing_my_bot123"
 CHANNEL_ID = "@testing_my_bot123"
+CHAT_URL = "https://t.me/aid_test_chat"
 CHAT_ID = "@aid_test_chat"
 BOT_URL = "https://t.me/aid946_bot"
 

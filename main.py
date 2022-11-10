@@ -35,6 +35,15 @@ def check_sub_channel(chat_member):
 async def user_joined(message: types.Message):
     await message.answer(cfg.hello_msg_text, reply_markup=nav.botMenu)
 
+# Ответ бота на сообщения /start или /help:
+@dp.message_handler(commands=['start', 'help'])
+async def welcome(message: types.Message):
+    user_id = message.from_user['id']
+    first_name = message.from_user['first_name']
+    mention = "[" + first_name + "](tg://user?id=" + str(user_id) + ")"
+    await message.reply("Привет, " + mention + "! Я бот модератор чатов.", reply_markup=nav.hello_btn, parse_mode="Markdown")
+
+
 @dp.message_handler()
 async def mess_handler(message: types.Message):
     # Проверка пользователя записан ли он в БД:

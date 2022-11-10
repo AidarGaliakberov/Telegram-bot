@@ -13,3 +13,8 @@ channelMenu.insert(btnUrlChannel)
 botUrl = InlineKeyboardButton(text="Перейти к боту", url=cfg.BOT_URL)
 botMenu = InlineKeyboardMarkup(row_width=1)
 botMenu.insert(botUrl)
+
+# Кнопка бота с приветствием и переходом в чат:
+bot_btn = InlineKeyboardButton(text="👋 Перейти к чату", url=cfg.CHAT_URL)
+hello_btn = InlineKeyboardMarkup(row_width=1)
+hello_btn.insert(bot_btn)
